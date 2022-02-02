@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App-layout</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --grey-color: #343a40;
+        --white: #fff;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        color: #444;
+      }
+      .layout-wrapper {
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        /* 80 px for navigation on left */
+        grid-template-rows: 80px 1fr;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+      }
+      nav,
+      main,
+      menu,
+      section,
+      aside {
+        padding-top: 24px;
+      }
+
+      nav {
+        background-color: #342a40;
+        color: var(--white);
+        grid-row: 1/-1;
+      }
+      menu {
+        background-color: #7048e8;
+        grid-column: 2/-1;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+      section {
+        background-color: #e9ecef;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+        overflow: scroll;
+        /* if we use overflow to scroll by default flex shrinks so we have set to zero(no shrink) in items */
+      }
+
+      main {
+      }
+      aside {
+        background-color: #e9ecef;
+      }
+      button {
+        background-color: #5f3dc4;
+        color: var(--white);
+        border: none;
+        padding: 8px 12px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+      .email {
+        flex-shrink: 0;
+        background-color: #adb5bd;
+        height: 96px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout-wrapper">
+      <nav>Nav</nav>
+      <menu>
+        <button>New</button>
+        <button>Reply</button>
+        <button>Forward</button>
+        <button>Mark unread</button>
+        <button>Trash</button>
+      </menu>
+      <section>
+        <div class="email">Email 1</div>
+        <div class="email">Email 2</div>
+        <div class="email">Email 3</div>
+        <div class="email">Email 4</div>
+        <div class="email">Email 5</div>
+        <div class="email">Email 6</div>
+        <div class="email">Email 7</div>
+        <div class="email">Email 8</div>
+        <div class="email">Email 9</div>
+        <div class="email">Email 10</div>
+      </section>
+      <main>Email View</main>
+      <aside>Additional info</aside>
+    </div>
+  </body>
+</html>

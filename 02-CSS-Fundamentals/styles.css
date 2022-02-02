@@ -1,0 +1,256 @@
+/* The tags inside another tag like em strong also gets 
+there font-size and font family changed cz of inhertiance
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /*all element gets this property inherited cz its child of body
+  except that has override the color and font family prop for example
+  multiple selector h1,h2,h3 down below selector
+  */
+  font-family: sans-serif;
+  color: #444;
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+nav {
+  text-align: center;
+}
+.main-header {
+  background-color: #f7f7f7;
+  /* adds on all side */
+  /* padding: 20px; */
+  /* to specify on specific side */
+  /* padding-left: 40px; */
+  /* padding-right: 40px; */
+  /* instead we can apply with values first for top and bottom and second for left and right */
+  padding: 20px 40px;
+  margin-bottom: 50px;
+}
+article {
+  margin-bottom: 60px;
+}
+.post-header {
+  margin-bottom: 40px;
+}
+.div-related-post {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  margin: 40px 0;
+  width: 500px;
+}
+nav a:link {
+  /* creates inline block element to block element basically full line taking ele. 
+  background-color: orangered;
+  padding: 10px;
+  margin: 10px;
+  display: block; */
+  /* Hybrid of inline block elements and block element have to specify prop inline-block */
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 25px;
+  text-transform: uppercase;
+  /* it is going on center in the parent div and parent 
+  div of p tag is whole body in this case.
+  */
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+/* not styling ol and ul*/
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+.img-htmlcode {
+  width: 100%;
+  /* if we donot specify on html then css will automatically find out the aspect ratio 
+  but we had specify on html so we should use height here*/
+  height: auto;
+  /* image is a inline-block box type cz we can apply margin on vertically and horizontal which we cannot in inline box type. 
+  margin: 50px;
+  */
+}
+/* Selects the p element inside footer tag only
+also called decendent selector 
+ 
+footer p {
+  font-size: 18px;
+}
+
+article header p{
+  font-style: italic;
+}
+*/
+
+#footer {
+  font-size: 18px;
+}
+#author {
+  font-style: italic;
+}
+
+.related-author {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* li {
+  list-style: none;
+} */
+
+/* Giving on parent element is good instead of all child elements */
+.related-post-list {
+  list-style: none;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+/* li:nth-child(even) { */
+/* color: #1098ad; */
+/* } */
+/* The article has different child tags like header h2 img then only p tag
+so below targetting is not true cz the first element of article is header
+article p:first-child {
+  color: red;
+}
+*/
+/* selects a tag with href attribute 
+Should be in the format LVHA
+*/
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+/* if that link is already clicked */
+a:visited {
+  color: #1098ad;
+}
+a:hover {
+  color: orangered;
+  /* text-decoration: underline dotted orangered; */
+  text-decoration: underline orangered;
+}
+/* during click */
+a:active {
+  font-style: italic;
+}
+/*On dev tool the basic styling as default name is user agent stylesheet*/
+/* also in inspect we can see filter :hov :active other pseudo classes */
+
+/*Imagine that a p tag with id and class css is given to all 3 the id class
+and p element itself so which is given more priority by css the answer is
+CSS gives highest priority  inline styles and then to ID then class and Psuedo class 3rd the element
+and lastly the universal (*) operator.if multiple then at last in the code
+line.(bottom code)->code written at last.
+But can be override with Important keyword
+*/
+
+/* Inheritance : child element getting prop of parent however that can be 
+override easily by simply declaring another css property to the child itself
+so we can say the inherited props have lowest priority  
+*/
+
+/* box model: every element is seen as box .height and width can be given to box model 
+there is border of the element technically the element is inside border
+Padding : empty space we can add between content and border
+and margin : space outside border we use to change the position 
+*/
+
+/* background image and background color occupies the content even area of padding but other donot occupy padding */
+
+/* there are two types of boxes in box model firest the inline box: a that occupies only the space of content   eg:button,a,strong
+another is block-leval boxes which contain all padding margin eg:h1,p,etc so they occupies a whole line and cannot be side by side.
+so basically display block prop is not given to strong,em,a,button, etc bz they are small and they donot need need entire line. 
+*/
+
+.like-post {
+  font-size: 20px;
+  padding: 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* pesudo elements declared with :: */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 20px;
+}
+
+/* adjacent sibling 
+h3 + p::first-line {
+  color: orangered;
+}
+*/
+
+/* before and after pseudo elements : when we donot want to specify small element to html instead we specify here in css for eg :popular posts 
+creates a child element of it
+*/
+
+h2 {
+  position: relative;
+}
+
+/* after pseudo element create last child element where before creats first 
+the content is  in last than after element and  at first at in before but we have position absolute so it doesnot matter here.
+*/
+h2::after {
+  content: "Top";
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  background-color: #ffe70e;
+  font-size: 16px;
+  padding: 5px 10px;
+}
