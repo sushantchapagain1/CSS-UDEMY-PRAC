@@ -38,12 +38,14 @@ html {
   /* by default browser use to set 1rem to 16 pixel in font-size but after we specify 62.5% then the default 16 is gone and set to 62.5% */
   /* 10 / 16 = 0.625 * 100 = 62.5% */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 /*****************************/

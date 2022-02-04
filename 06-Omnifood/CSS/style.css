@@ -9,6 +9,7 @@
   /* for sticky nav */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 .logo {
   height: 2.2rem;
@@ -20,7 +21,8 @@
 .main-nav-list {
   display: flex;
   list-style-type: none;
-  gap: 3.2rem;
+  align-items: center;
+  gap: 4.8rem;
 }
 .main-nav-links:link,
 .main-nav-links:visited {
@@ -46,7 +48,23 @@
 .main-nav-links.nav-btn:active {
   background-color: var(--shade-color);
 }
+.menu-icon-mobile {
+  border: none;
+  background: none;
+  cursor: pointer;
 
+  /* for large screen size hide */
+  display: none;
+}
+.hamburger,
+.close-hamburger {
+  height: 4.8rem;
+  width: 4.8rem;
+  stroke: #333;
+}
+.menu-icon-mobile ion-icon[name='close-outline'] {
+  display: none;
+}
 /*****************************/
 /* Hero Section */
 /*****************************/
@@ -416,6 +434,7 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .plan-btn {
   text-align: center;
