@@ -112,6 +112,7 @@ canot use rem we have to use em which is same 16px.
   }
   .menu-icon-mobile {
     display: block;
+    z-index: 9999;
   }
   .nav {
     position: absolute;

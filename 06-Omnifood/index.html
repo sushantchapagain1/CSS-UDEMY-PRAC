@@ -21,19 +21,31 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- For Safari smooth scroll -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
+    <div class="loader" role="img" aria-label="Loader"></div>
     <header class="header">
       <a href="#">
         <img src="img/omnifood-logo.png" alt="OmniFood Logo" class="logo" />
       </a>
       <nav class="nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-links" href="#">How it works</a></li>
-          <li><a class="main-nav-links" href="#">Meals</a></li>
-          <li><a class="main-nav-links" href="#">Testimonials</a></li>
-          <li><a class="main-nav-links" href="#">Pricing</a></li>
-          <li><a class="main-nav-links nav-btn" href="#">Try for free</a></li>
+          <li><a class="main-nav-links" href="#how">How it works</a></li>
+          <li><a class="main-nav-links" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-links" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-links" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-links nav-btn" href="#cta">Try for free</a>
+          </li>
         </ul>
       </nav>
 
@@ -56,8 +68,8 @@
               nutritional needs.
             </p>
             <div class="hero-btns">
-              <a href="#" class="btn primary-btn">Start eating well</a>
-              <a href="#" class="btn secondary-btn">Learn More &#8595;</a>
+              <a href="#cta" class="btn primary-btn">Start eating well</a>
+              <a href="#how" class="btn secondary-btn">Learn More &#8595;</a>
             </div>
             <div class="delivered-meals">
               <div class="customer-img">
@@ -107,7 +119,7 @@
       <!-- Ends Featured In Section -->
 
       <!-- How it Works Section -->
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="sub-heading">How it works</span>
           <h2 class="heading-secondary">
@@ -178,7 +190,7 @@
       <!-- Ends it Works Section -->
 
       <!-- Meals Section -->
-      <section class="meals-section">
+      <section class="meals-section" id="meals">
         <div class="container center-text">
           <span class="sub-heading">Meals</span>
           <h2 class="heading-secondary">
@@ -299,7 +311,7 @@
       <!-- Ends Meals Section -->
 
       <!--Testimonial Section -->
-      <section class="testimonial-section">
+      <section class="testimonial-section" id="testimonials">
         <div class="testimonial-container">
           <span class="sub-heading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -401,7 +413,7 @@
       <!-- Ends Testimonial Section -->
 
       <!-- Pricing Section -->
-      <section class="pricing-section">
+      <section class="pricing-section" id="pricing">
         <div class="container">
           <span class="sub-heading">Pricing</span>
           <h2 class="heading-secondary">
@@ -533,7 +545,7 @@
       <!-- Ends Pricing Section -->
 
       <!-- CTA Section -->
-      <section class="cta-section">
+      <section class="cta-section" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-txt-box">
@@ -569,8 +581,8 @@
                     <option value="">Please choose one option</option>
                     <option value="friends">Friends and Family</option>
                     <option value="youtube">Youtube Video</option>
-                    <option value="podcasr">Podcast</option>
-                    <option value="facebok">Facebook Ad</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="facebook">Facebook Ad</option>
                     <option value="others">Others</option>
                   </select>
                 </div>
@@ -653,6 +665,5 @@
       </div>
     </footer>
     <!-- Ends Footer -->
-    <script src="script.js"></script>
   </body>
 </html>
