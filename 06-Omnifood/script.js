@@ -37,9 +37,20 @@ allLinks.forEach((links) => {
 });
 
 // Fixed Navbar
-
-// Loader
-const loader = document.querySelector('.loader');
-window.onload = function () {
-  loader.style.display = 'none';
-};
+const heroSection = document.querySelector('.hero');
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (ent.isIntersecting === false) {
+      document.body.classList.add('sticky');
+    }
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove('sticky');
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+observer.observe(heroSection);

@@ -215,7 +215,7 @@ canot use rem we have to use em which is same 16px.
   .btn,
   .btn:link,
   .btn:visited {
-    padding: 2.4rem 1.6rem;
+    padding: 1.6rem 1.2rem;
   }
   .logos img {
     height: 1.2rem;
